@@ -1,0 +1,20 @@
+modules:
+  jira:customField:
+    - key: issue-on-planet-field-custom-field-ui-kit-2-hello-world
+      name: issue-on-planet-field
+      description: A hello world custom field.
+      type: string
+      render: native
+      resource: main
+      edit:
+        resource: edit
+        render: native
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: edit
+    path: src/frontend/edit.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/c941d5e9-6f7a-4853-bfd5-1e95a72445ea
