@@ -13,7 +13,7 @@ const View = () => {
 
   return (
     <>
-      <Text>{`Hello ${fieldValue || 'world'}!`}</Text>
+      <Text>{`${fieldValue || 'Please choose a planet'}`}</Text>
     </>
   );
 };
