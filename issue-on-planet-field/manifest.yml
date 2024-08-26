@@ -1,8 +1,8 @@
 modules:
   jira:customField:
     - key: issue-on-planet-field-custom-field-ui-kit-2-hello-world
-      name: issue-on-planet-field
-      description: A hello world custom field.
+      name: Issue from Star Wars Planet
+      description: Which planet is this issue on?
       type: string
       render: native
       resource: main
@@ -18,3 +18,11 @@ app:
   runtime:
     name: nodejs18.x
   id: ari:cloud:ecosystem::app/c941d5e9-6f7a-4853-bfd5-1e95a72445ea
+permissions:
+  scopes: []
+  external:
+    fetch:
+      client:
+        - swapi.dev
+      backend:
+        - swapi.dev
