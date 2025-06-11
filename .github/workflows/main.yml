@@ -1,9 +1,18 @@
 on:
   workflow_dispatch:
+    inputs:
+      deploy_ref:
+        description: 'The tag or commit SHA to deploy'
+        required: true
+        type: string
   
 jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.deploy_ref }}
       - name: TEST    
-        run: echo "${{ github.ref }}"
+        run: echo "${{ inputs.deploy_ref }}"
