@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+  
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: TEST    
+        run: echo "${{ github.ref }}"
